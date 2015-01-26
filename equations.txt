@@ -1,0 +1,68 @@
+d[T F]
+dt = -k2[T F][V II] +k1[T F = V II]-k4[T F][V IIa] +k3[T F = V IIa] (1)
+d[V II]
+dt = -k2[T F][V II] +k1[T F = V II]-k5[T F = V IIa][V II]-k6[Xa][V II]-k7[IIa][V II] (2)
+d[T F = V II]
+dt = -k1[T F = V II] +k2[T F][V II] (3)
+d[V IIa]
+dt = -k4[T F][V IIa] +k3[T F = V IIa] +k5[T F = V IIa][V II] +k6[Xa][V II] +k7[IIa][V II] (4)
+d[T F = V IIa]
+dt = -k3[T F = V IIa] +k4[T F][V IIa]-k9[T F = V IIa][X] +k8[T F = V IIa = X]-k12[T F = V IIa][Xa] +k11[T F = V IIa = Xa] -k14[T F = V IIa][IX] +k13[T F = V IIa = IX] +k15[T F = V IIa = IX]-k37[T F = V IIa][Xa = T FPI]-k42[T F = V IIa][AT](5)
+d[Xa]
+dt = -k12[T F = V IIa][Xa] +k11[T F = V IIa = Xa] +k22[IXa = V IIIa = X]-k28[Xa][Va] +k27[Xa = Va]-k34[Xa][T FPI] +k33[Xa = T FPI]-k38[Xa][AT] +k43[IXa][X](6)
+d[IIa]
+dt = k16[Xa][II] +k32[mIIa][Xa = Va]-k41[IIa][AT] (7)
+d[X]
+dt = -k9[T F = V IIa][X] +k8[T F = V IIa = X]-k21[IXa = V IIIa][X] +k20[IXa = V IIIa = X] +k25[IXa = V IIIa = X]-k43[IXa][X] (8)
+d[T F = V IIa = X]
+dt = k9[T F = V IIa][X]-k10[T F = V IIa = X]-k8[T F = V IIa = X] (9)
+d[T F = V IIa = Xa]
+dt = k10[T F = V IIa = X] +k12[T F = V IIa][Xa]-k11[T F = V IIa = Xa]-k36[T F = V IIa = Xa][T FPI] +k35[T F = V IIa = Xa = T FPI] (10)
+d[IX]
+dt = -k14[T F = V IIa][IX] +k13[T F = V IIa = IX] (11)
+d[T F = V IIa = IX]
+dt = k14[T F = V IIa][IX]-k13[T F = V IIa = IX]-k15[T F = V IIa = IX] (12)
+d[IXa]
+dt = k15[T F = V IIa = IX]-k19[V IIIa][IXa] +k18[IXa = V IIIa] +k25[IXa = V IIIa = X] +k25[IXa = V IIIa]-k40[IXa][AT] (13)
+d[II]
+dt = -k16[Xa][II]-k30[Xa = Va][II] +k29[Xa = Va = II] (14)
+d[V III]
+dt = -k17[IIa][V III] (15)
+d[V IIIa]
+dt = k17[IIa][V III]-k19[V IIIa][IXa] +k18[IXa = V IIIa]-k24[V IIIa] +k23[V III.lca1][V III.a2] (16)
+d[IXa = V IIIa]
+dt = k19[V IIIa][IXa]-k18[IXa = V IIIa]-k21[IXa = V IIIa][X] +k20[IXa = V IIIa = X] +k22[IXa = V IIIa = X]-k25[IXa = V IIIa] (17)
+d[IXa = V IIIa = X]
+dt = k21[IXa = V IIIa][X]-k20[IXa = V IIIa = X]-k22[IXa = V IIIa = X]-k25[IXa = V IIIa = X] (18)
+d[V III.lca1]
+dt = k24[V IIIa] +k25[IXa = V IIIa = X] +k25[IXa = V IIIa]-k23[V III.lca1][V III.a2] (19)
+d[V III.a2]
+dt = k24[V IIIa] +k25[IXa = V IIIa = X] +k25[IXa = V IIIa]-k23[V III.lca1][V III.a2] (20)
+d[V]
+dt = -k26[IIa][V]-k44[mIIa][V] (21)
+d[Va]
+dt = k26[IIa][V]-k28[Xa][Va] +k27[Xa = Va] +k44[mIIa][V] (22)
+d[Xa = Va]
+dt = k28[Xa][Va]-k27[Xa = Va]-k30[Xa = Va][II] +k29[Xa = Va = II] +k31[Xa = Va = II] (23)
+d[Xa = Va = II]
+dt = k30[Xa = Va][II]-k29[Xa = Va = II]-k31[Xa = Va = II] (24)
+d[mIIa]
+dt = k31[Xa = Va = II]-k32[mIIa][Xa = Va]-k39[mIIa][AT] (25)
+d[T FPI]
+dt = -k34[Xa][T FPI] +k33[Xa = T FPI]-k36[T F = V IIa = Xa][T FPI] +k35[T F = V IIa = Xa = T FPI] (26)
+d[Xa = T FPI]
+dt = k34[Xa][T FPI]-k33[Xa = T FPI]-k37[T F = V IIa][Xa = T FPI] (27)
+d[T F = V IIa = Xa = T FPI]
+dt = k36[T F = V IIa = Xa][T FPI]-k35[T F = V IIa = Xa = T FPI] +k37[T F = V IIa][Xa = T FPI] (28)
+d[AT]
+dt = -k38[Xa][AT]-k39[mIIa][AT]-k40[IXa][AT]-k41[IIa][AT]-k42[T F = V IIa][AT] (29)
+d[Xa = AT]
+dt = k38[Xa][AT] (30)
+d[mIIa = AT]
+dt = k39[mIIa][AT] (31)
+d[IXa = AT]
+dt = k40[IXa][AT] (32)
+d[IIa = AT]
+dt = k41[IIa][AT] (33)
+d[T F = V IIa = AT]
+dt = k42[T F = V IIa][AT] (34)

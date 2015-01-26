@@ -1,0 +1,2137 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass beamer
+\begin_preamble
+\usetheme{Warsaw}
+% or ...
+
+\setbeamercovered{transparent}
+% or whatever (possibly just delete it)
+\end_preamble
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 0
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 0
+\use_package mhchem 1
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 2
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+This file is a solution template for:
+\end_layout
+
+\begin_layout Itemize
+Talk at a conference/colloquium.
+ 
+\end_layout
+
+\begin_layout Itemize
+Talk length is about 20min.
+ 
+\end_layout
+
+\begin_layout Itemize
+Style is ornate.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Copyright 2004 by Till Tantau <tantau@users.sourceforge.net>.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+In principle, this file can be redistributed and/or modified under the terms
+ of the GNU Public License, version 2.
+ However, this file is supposed to be a template to be modified for your
+ own needs.
+ For this reason, if you use this file as a template and not specifically
+ distribute it as part of a another package/program, the author grants the
+ extra permission to freely copy and modify this file as you see fit and
+ even to delete this copyright notice.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Title
+Thrombin system reduction 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+AtBeginSection[]{%
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+frame<beamer>{ 
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+frametitle{Outline}   
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+tableofcontents[currentsection] 
+\end_layout
+
+\begin_layout Plain Layout
+
+  }
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Outline
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Structuring a talk is a difficult task and the following structure may not
+ be suitable.
+ Here are some rules that apply for this solution: 
+\end_layout
+
+\begin_layout Itemize
+Exactly two or three sections (other than the summary).
+ 
+\end_layout
+
+\begin_layout Itemize
+At *most* three subsections per section.
+ 
+\end_layout
+
+\begin_layout Itemize
+Talk about 30s to 2min per frame.
+ So there should be between about 15 and 30 frames, all told.
+\end_layout
+
+\begin_layout Itemize
+A conference audience is likely to know very little of what you are going
+ to talk about.
+ So *simplify*! 
+\end_layout
+
+\begin_layout Itemize
+In a 20min talk, getting the main ideas across is hard enough.
+ Leave out details, even if it means being less precise than you think necessary.
+ 
+\end_layout
+
+\begin_layout Itemize
+If you omit details that are vital to the proof/implementation, just say
+ so once.
+ Everybody will be happy with that.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Network based system reduction
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Network based system reduction.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Formulate the system as a network
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+d[TF]/dt = −k2[TF][VII]+k1[TF =VII]−k4[TF][VIIa]+k3[TF =VIIa]
+\end_layout
+
+\begin_layout Itemize
+Edge list:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+[T F];[T F]
+\end_layout
+
+\begin_layout Itemize
+[T F];[V II] 
+\end_layout
+
+\begin_layout Itemize
+[T F];[T F = V II] 
+\end_layout
+
+\begin_layout Itemize
+[T F];[T F]
+\end_layout
+
+\begin_layout Itemize
+[T F];[V IIa]
+\end_layout
+
+\begin_layout Itemize
+[T F];[T F = V IIa]
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Itemize
+Analysis: 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Each chemical spiecies is controled by 29 speices including itself.
+\end_layout
+
+\begin_layout Itemize
+The last 5 equations can be obmitted when studying dynamics of Thrombin
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Problem formulation
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Problem formulation
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\dot{\boldsymbol{y}}(t)=\boldsymbol{f}(\boldsymbol{y}(t),\boldsymbol{k})\label{eq:2}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\boldsymbol{y}=(y_{1},...,y_{n})$
+\end_inset
+
+, 
+\begin_inset Formula $n=34,$
+\end_inset
+
+ 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+: concentration of chemical species 
+\begin_inset Formula $i$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\boldsymbol{k}$
+\end_inset
+
+: reaction rates, given constants
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\boldsymbol{f}(\boldsymbol{y}(t),\boldsymbol{k})=(f_{1}(\boldsymbol{y}(t),\boldsymbol{k}),...,f_{m}(\boldsymbol{y}(t),\boldsymbol{k}))$
+\end_inset
+
+, 
+\begin_inset Formula $m=42$
+\end_inset
+
+, there are 
+\begin_inset Formula $42$
+\end_inset
+
+ rate equation 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $y_{14}$
+\end_inset
+
+: concentration of Thrombin
+\end_layout
+
+\begin_layout Block
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Problem formulation
+\end_layout
+
+\end_inset
+
+Find another system of equations in terms of new variable 
+\begin_inset Formula $\boldsymbol{z}$
+\end_inset
+
+ such that
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\boldsymbol{z}(t)$
+\end_inset
+
+ is a transformation of 
+\begin_inset Formula $\boldsymbol{y}(t)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\dim(\boldsymbol{z})\le4$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Some entry in 
+\begin_inset Formula $\boldsymbol{z}$
+\end_inset
+
+, e.g 
+\begin_inset Formula $z_{1}(t)\approx y_{14}(t)$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Section
+\begin_inset Formula $l_{1}-\min$
+\end_inset
+
+ formulation
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $l_{1}-\min$
+\end_inset
+
+ formulation
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Block
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $l_{1}-\min$
+\end_inset
+
+ formulation
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\min|C|_{1}\text{ s. t. }\begin{cases}
+||\dot{\boldsymbol{z}}(t)-\boldsymbol{f}(\boldsymbol{z}(t),C)||_{k} & \le\varepsilon_{1}\forall t\in\{t_{1},...,t_{N}\}\\
+||z_{14}-f_{14}(\boldsymbol{z}(t),C)||_{k} & \le\varepsilon_{2}
+\end{cases}
+\]
+
+\end_inset
+
+where
+\begin_inset Formula $\varepsilon_{1}>\varepsilon_{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Block
+Note that the transformation: 
+\begin_inset Formula $\boldsymbol{y}\rightarrow\boldsymbol{z}=\boldsymbol{y}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Section
+Data driven system reduction method
+\end_layout
+
+\begin_layout Subsection
+Correlation analysis of time series from simulated human coagulation cascade
+ dynamics
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Time series
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figures/timeseries.eps
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Sampling range for correlation computation: [158.9502,564.4748]
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Correlation matrix
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figures/correlation.eps
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+One color represent the correlations of one variable to all others
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $14\rightarrow25$
+\end_inset
+
+ are highly correlated, correlation about 1.
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Subsection
+System reduction using linear transformation
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Dimension reduction using singular value decomposition
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+Y_{N\times n} & =Z_{N\times N}\Sigma_{N\times n}(V_{n\times n})^{T}\\
+\tilde{Y} & =Z_{N\times p}\Sigma_{p\times p}(V_{p\times n})^{T}\\
+ & \approx Y\\
+\tilde{Y}^{T} & =(\Sigma_{p\times p}(V_{p\times n})^{T})^{T}Z_{N\times p}^{T}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $N$
+\end_inset
+
+: sample size
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $p$
+\end_inset
+
+: reduced dimension, dimension of new variable.
+\end_layout
+
+\begin_layout Standard
+Find 
+\begin_inset Formula $A$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{align*}
+||\boldsymbol{y}-A\boldsymbol{z}|| & \le\varepsilon\\
+\dim\boldsymbol{z} & \le5
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A=(\Sigma_{p\times p}(V_{p\times n})^{T})^{T}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Dimension reduction using singular value decomposition
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figures/errorrateraw.eps
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Error rate: 
+\begin_inset Formula $\frac{||\tilde{Y}^{T}-Y||_{F}}{||Y||_{F}}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Dimension reduction using linear transformations: singular value decomposition
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+\boldsymbol{y}(t) & \approx A\boldsymbol{z}(t)\nonumber \\
+\boldsymbol{z}(t) & \approx A^{-1}\boldsymbol{y}(t)\nonumber \\
+\frac{d\boldsymbol{z}(t)}{dt} & =A^{-1}\frac{d\boldsymbol{y}(t)}{dt}\nonumber \\
+\frac{d\boldsymbol{z}(t)}{dt} & =A^{-1}\boldsymbol{f}(\boldsymbol{y}(t),\boldsymbol{k})\nonumber \\
+\frac{d\boldsymbol{z}(t)}{dt} & \approx A^{-1}\boldsymbol{f}(A\boldsymbol{z}(t),\boldsymbol{k})\label{eq:1}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $A^{-1}$
+\end_inset
+
+: may need to use pseudo inverse.
+\end_layout
+
+\begin_layout Itemize
+From 
+\begin_inset Formula $\boldsymbol{z}(t)$
+\end_inset
+
+ we can get Thrombin and other components by 
+\begin_inset Formula $\boldsymbol{y}(t)=A\boldsymbol{z}(t)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+(
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ref{eq:1})
+\end_layout
+
+\end_inset
+
+: equation for defining new variable 
+\begin_inset Formula $\boldsymbol{z}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Implementing the code 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Given
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Code to simulate the equation 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+(
+\backslash
+ref{eq:2})
+\end_layout
+
+\end_inset
+
+ (copied below):
+\begin_inset Formula 
+\begin{eqnarray*}
+\dot{\boldsymbol{y}}(t) & =\boldsymbol{f}(\boldsymbol{y}(t),\boldsymbol{k}) & (\ref{eq:2})
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+function reaction_rates_original(t,C)
+\end_layout
+
+\begin_layout Standard
+dC(1,1) = -k2*C(1)*C(2) + k1*C(3) - k4*C(1)*C(4) +...;
+\end_layout
+
+\begin_layout Standard
+dC(2,1) = -k2*C(1)*C(2) + k1*C(3) - k5*C(5)*C(2) +...
+ 
+\end_layout
+
+\begin_layout Standard
+dC(3,1) = -k1*C(3) + k2*C(1)*C(2);
+\end_layout
+
+\begin_layout Standard
+end
+\end_layout
+
+\begin_layout Standard
+[T,C] = ode23t(@reaction_rates_original,tspan, C0, options);
+\end_layout
+
+\begin_layout Standard
+C(i,1)
+\begin_inset Formula $=y_{i}(t)$
+\end_inset
+
+, dC(i,1)
+\begin_inset Formula $=\dot{y}_{i}(t)$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Given 
+\begin_inset Formula $A$
+\end_inset
+
+ computed by SVD.
+\end_layout
+
+\begin_layout Itemize
+Output: code for simulating the system 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+(
+\backslash
+ref{eq:1})
+\end_layout
+
+\end_inset
+
+ (copied below):
+\begin_inset Formula 
+\begin{eqnarray*}
+\boldsymbol{z}(t)\approx & A^{-1}\boldsymbol{y}(t)\\
+\dot{\boldsymbol{z}}(t)\approx & A^{-1}\boldsymbol{f}(A\boldsymbol{z}(t),\boldsymbol{k}) & (\ref{eq:1})
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Implementing the code 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Solution:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+reaction_rates_original(t,C) is defined as in original system.
+\end_layout
+
+\begin_layout Itemize
+function dz = reaction_rates(t,z,A)
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+C=A*z; 
+\end_layout
+
+\begin_layout Standard
+dz=pinv(A)*reaction_rates_original(t,C);
+\end_layout
+
+\begin_layout Standard
+end
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+z0=pinv(A)*C0
+\end_layout
+
+\begin_layout Itemize
+[T,z] = ode23t(@(t,z)reaction_rates(t,z,A),tspan, z0, options);
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Separator
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Implementing the code 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Solution:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+reaction_rates_original(t,C) is defined as in original system.
+\end_layout
+
+\begin_layout Itemize
+function dz = reaction_rates(t,z,A)
+\end_layout
+
+\begin_deeper
+\begin_layout Plain Layout
+C=A*z; 
+\end_layout
+
+\begin_layout Plain Layout
+dz=pinv(A)*reaction_rates_original(t,C);
+\end_layout
+
+\begin_layout Plain Layout
+end
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+z0=pinv(A)*C0
+\end_layout
+
+\begin_layout Itemize
+[T,z] = ode23t(@(t,z)reaction_rates(t,z,A),tspan, z0, options);
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Validation procedure
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Solve the original system numerically to get 
+\begin_inset Formula $Y_{N\times n}$
+\end_inset
+
+, 
+\begin_inset Formula $N=1200,n=34$
+\end_inset
+
+, 
+\series bold
+not 29
+\series default
+.
+\end_layout
+
+\begin_layout Enumerate
+Do SVD 
+\begin_inset Formula $Y_{N\times n}=Z_{N\times N}\Sigma_{N\times n}(V_{n\times n})^{T}$
+\end_inset
+
+ , 
+\begin_inset Formula $A=(\Sigma_{p\times p}(V_{p\times n})^{T})^{T}$
+\end_inset
+
+, 
+\begin_inset Formula $\tilde{Y}^{svd}=(\Sigma_{p\times p}(V_{p\times n})^{T})^{T}Z_{N\times p}^{T}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+label{step3}
+\end_layout
+
+\end_inset
+
+ Solve 
+\begin_inset Formula $\dot{\boldsymbol{z}}(t)\approx A^{-1}\boldsymbol{f}(A\boldsymbol{z}(t),\boldsymbol{k})$
+\end_inset
+
+ to get 
+\begin_inset Formula $(Z_{N\times p}^{reduced})^{T}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Compute 
+\begin_inset Formula $(\tilde{Y}^{reconstruct})^{T}=A(Z_{N\times p}^{reduced})^{T}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Compute error rate using 
+\begin_inset Formula $\tilde{Y}^{reconstruct},\tilde{Y}_{N\times N}^{svd}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Result - observations
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="11">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(1)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+9
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(2)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1201
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1201
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+115
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+920
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1201
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+786
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+80
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+66
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+56
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(3)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.86
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5.78
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.17
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+18
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+108
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.06
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.07
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6.68
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5.57
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.8
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(4)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.27
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.06
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.02
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.00
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.00
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.00
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.00
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.00
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.00
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Row (1) - number of eigenvectors, 
+\begin_inset Formula $p$
+\end_inset
+
+ or 
+\begin_inset Formula $\dim(\boldsymbol{z})$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Row (2) - data length achieved in step 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ref{step3}
+\end_layout
+
+\end_inset
+
+, 
+\end_layout
+
+\begin_layout Standard
+Rows (3) and (4): error rate computed using 
+\begin_inset Formula $\tilde{Y}^{reconstruc},\tilde{Y}^{svd}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Training data length does matter: 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The new system might become very stiff
+\end_layout
+
+\begin_layout Itemize
+Accuracy does not linearly depends on training data length
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $p=3$
+\end_inset
+
+ or 
+\begin_inset Formula $p=6$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Time series comparision
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figures/timeseries_reconstruct.eps
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Time series comparision - error
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figures/timeseries_reconstruct_error.eps
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Thrombin time series
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figures/timeseries_reconstruct_thrombin.eps
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Subsection
+System reduction method
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+General idea on dimension reduction of dynamical systems
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Block
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+Problem definition
+\end_layout
+
+\end_inset
+
+ Given the time dynamical system
+\begin_inset Formula 
+\begin{eqnarray*}
+\dot{\boldsymbol{y}}(t) & =\boldsymbol{f}(\boldsymbol{y}(t),\boldsymbol{k}) & (\ref{eq:2})
+\end{eqnarray*}
+
+\end_inset
+
+Find 
+\begin_inset Formula $p,\boldsymbol{g},\boldsymbol{h}$
+\end_inset
+
+: 
+\begin_inset Formula 
+\begin{align}
+\boldsymbol{g}:\mathbb{R}^{n} & \rightarrow\mathbb{R}^{p}\nonumber \\
+\boldsymbol{y} & \mapsto\boldsymbol{z}=\boldsymbol{g}(\boldsymbol{y})\\
+\boldsymbol{h}:\mathbb{R}^{p} & \rightarrow\mathbb{R}^{n}\nonumber \\
+\boldsymbol{z} & \mapsto\boldsymbol{y}=\boldsymbol{h}(\boldsymbol{z})
+\end{align}
+
+\end_inset
+
+such that 
+\begin_inset Formula 
+\begin{align}
+||\boldsymbol{h}(\boldsymbol{g}(\boldsymbol{y}(t)))-\boldsymbol{y}(t)||_{l} & \le\varepsilon,\forall\boldsymbol{y}\text{ satisfies }(\ref{eq:2})\label{eq:3}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+General idea on dimension reduction of dynamical systems
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Special case:
+\begin_inset Formula 
+\begin{eqnarray*}
+\dot{\boldsymbol{y}}(t) & =\boldsymbol{f}(\boldsymbol{y}(t),\boldsymbol{k}) & (\ref{eq:2})
+\end{eqnarray*}
+
+\end_inset
+
+Find 
+\begin_inset Formula $p,\boldsymbol{g},\boldsymbol{h}$
+\end_inset
+
+: 
+\begin_inset Formula 
+\begin{align}
+\boldsymbol{g}:\mathbb{R}^{n} & \rightarrow\mathbb{R}^{p}\nonumber \\
+\boldsymbol{y} & \mapsto\boldsymbol{z}=A\boldsymbol{y}\\
+\boldsymbol{h}:\mathbb{R}^{p} & \rightarrow\mathbb{R}^{n}\nonumber \\
+\boldsymbol{z} & \mapsto\boldsymbol{y}=pinv(A^{-1})\boldsymbol{z}
+\end{align}
+
+\end_inset
+
+such that 
+\begin_inset Formula 
+\begin{align}
+||\boldsymbol{h}(\boldsymbol{g}(\boldsymbol{y}(t)))-\boldsymbol{y}(t)||_{l} & \le\varepsilon,\forall\boldsymbol{y}\text{ satisfies }(\ref{eq:2})\label{eq:3-1}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+General idea on dimension reduction of dynamical systems
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\boldsymbol{g},\boldsymbol{h}$
+\end_inset
+
+ do not need to be bijective maps.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $p\ll n$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $||\boldsymbol{y}(t)||_{l}$
+\end_inset
+
+ in 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+(
+\backslash
+ref{eq:3})
+\end_layout
+
+\end_inset
+
+ is some predefined norm, such as: 
+\begin_inset Formula $\sqrt{\int_{0}^{T}\sum_{i=1}^{n}|y_{i}(t))|{}^{2}dt},\int_{0}^{T}\sum_{i=1}^{n}|y_{j}(t)|dt$
+\end_inset
+
+.
+ The discretized versions: 
+\begin_inset Formula $\sum_{j=1}^{N}\sum_{i=1}^{n}|y_{i}(t_{j}))|{}^{2},\sum_{j=1}^{N}\sum_{i=1}^{n}|y_{i}(t_{j})|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+(
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ref{eq:3})
+\end_layout
+
+\end_inset
+
+ can be modified to serve certain criteria, special priority on certain
+ component, e.g include constraint such as 
+\begin_inset Formula $|h_{14}(\boldsymbol{z})-y_{14}(t)|\le\varepsilon'$
+\end_inset
+
+, 
+\begin_inset Formula $\varepsilon'<\varepsilon$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+General idea on dimension reduction of dynamical systems 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Denote 
+\begin_inset Formula $J(\boldsymbol{y})=\frac{\partial\boldsymbol{g}(\boldsymbol{y})}{\partial\boldsymbol{y}}$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align}
+\boldsymbol{z}(t) & =\boldsymbol{g}(\boldsymbol{y}(t))\nonumber \\
+\Rightarrow\dot{\boldsymbol{z}}(t) & =\frac{\partial\boldsymbol{g}(\boldsymbol{y}(t))}{\partial\boldsymbol{y}}\dot{\boldsymbol{y}}(t)\nonumber \\
+ & =J(\boldsymbol{y})\boldsymbol{f}(\boldsymbol{y}(t),\boldsymbol{k})\nonumber \\
+ & =J(\boldsymbol{h}(\boldsymbol{z}))\boldsymbol{f}(\boldsymbol{h}(\boldsymbol{z}),\boldsymbol{k})\label{eq:4}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Block
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+System reduction procedure
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Solve for 
+\begin_inset Formula $\boldsymbol{y}(t)$
+\end_inset
+
+ from Eq.
+ 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+(
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ref{eq:2}
+\end_layout
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Itemize
+Chose 
+\begin_inset Formula $p,\boldsymbol{g},\boldsymbol{h}$
+\end_inset
+
+ such that Eq.
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+(
+\backslash
+ref{eq:3})
+\end_layout
+
+\end_inset
+
+ is satisfied
+\end_layout
+
+\begin_layout Itemize
+Construct the equation Eq.
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+(
+\backslash
+ref{eq:4})
+\end_layout
+
+\end_inset
+
+ for computing 
+\begin_inset Formula $\boldsymbol{z}(t)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+After having 
+\begin_inset Formula $\boldsymbol{z}(t)$
+\end_inset
+
+ from Eq.
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+(
+\backslash
+ref{eq:4})
+\end_layout
+
+\end_inset
+
+, 
+\begin_inset Formula $\boldsymbol{y}$
+\end_inset
+
+ can be computed using 
+\begin_inset Formula $\boldsymbol{h}$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Note that the one - one correspondence is not so important
+\end_layout
+
+\begin_layout Plain Layout
+Connection with vector analysis, quaternion analysis, Clifford analysis?Issue:
+ robustness of the whole procedure with respect to intial condition?
+\end_layout
+
+\begin_layout Plain Layout
+This technique should works well with sparse network or sparse system when
+ the right hand side do not have a lot of component
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Separator
+
+\end_layout
+
+\end_body
+\end_document
